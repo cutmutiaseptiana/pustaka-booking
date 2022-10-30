@@ -9,15 +9,15 @@
                 <i class="fa fa-bars"></i>
             </button>
             <!-- Page Heading -->
-            <h1 class="h3 mb-2 text-gray-800"></h1>
+            <h1 class="h3 mb-2 text-gray-800"><?= $judul?></h1>
             <!-- Topbar Navbar -->
             <ul class="navbar-nav ml-auto">
                 <div class="topbar-divider d-none d-sm-block"></div>
                 <!-- Nav Item - User Information -->
                 <li class="nav-item dropdown no-arrow">
                     <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" ariahaspopup="true" aria-expanded="false">
-                        <span class="mr-2 d-none d-lg-inline textgray-600 small"> </span>
-                        <img class="img-profile rounded-circle" src="" title="ueiue">
+                        <span class="mr-2 d-none d-lg-inline textgray-600 small">CMS</span>
+                        <img class="img-profile rounded-circle" src="https://www.99.co/blog/indonesia/wp-content/uploads/2022/06/foto-profil-sileut-cewek.jpg">
                     </a>
                     <!-- Dropdown - User Information -->
                     <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"

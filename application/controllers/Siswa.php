@@ -12,19 +12,21 @@ class Siswa extends CI_Controller {
 
 	public function index()
 	{
+		$data['judul'] = 'Data Siswa';
 		$data['siswa'] = $this->ModelSiswa->getSiswa()->result_array();
 		$this->load->view('templates/header');
         $this->load->view('templates/sidebar');
-        $this->load->view('templates/topbar');
+        $this->load->view('templates/topbar', $data);
 		$this->load->view('siswa/index', $data);
 		$this->load->view('templates/footer');
 	}
 
 	public function tambah()
 	{
+		$data['judul'] = 'Tambah Siswa';
 		$this->load->view('templates/header');
         $this->load->view('templates/sidebar');
-        $this->load->view('templates/topbar');
+        $this->load->view('templates/topbar', $data);
 		$this->load->view('siswa/tambah');
 		$this->load->view('templates/footer');
 	}
@@ -52,12 +54,13 @@ class Siswa extends CI_Controller {
 
 	public function edit()
 	{
+		$data['judul'] = 'edit Siswa';
 		$data['siswa'] = $this->ModelSiswa->getSiswa()->result_array();
 		$where = ['id' => $this->uri->segment(3)];
 		$data['siswa'] = $this->ModelSiswa->siswaWhere($where)->row_array();
 		$this->load->view('templates/header');
         $this->load->view('templates/sidebar');
-        $this->load->view('templates/topbar');
+        $this->load->view('templates/topbar', $data);
 		$this->load->view('siswa/edit', $data);
 		$this->load->view('templates/footer');
 	}
